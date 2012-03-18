@@ -2,8 +2,6 @@ class TranslateController < ActionController::Base
   # It seems users with active_record_store may get a "no :secret given" error if we don't disable csrf protection,
   skip_before_filter :verify_authenticity_token
 
-  layout 'translate'
-
   before_filter :init_translations
   before_filter :set_locale
 
